@@ -1,0 +1,49 @@
+html{
+
+    border:solid;
+    
+    }
+    
+    /*style for image */
+    
+    img{
+    
+    width: 150px;
+    
+    height: 150px;
+    
+    float: left;
+    
+    padding-right :10px;
+    
+    padding-left :10px;
+    
+    }
+    
+    /*style for paragrphs */
+    
+    p{
+    
+    text-align: justify;
+    
+    margin:2px;
+    
+    }
+    
+    /*style for body */
+    
+    body{
+    
+    /* border: 3px solid red; */
+    
+    background-color: lightblue;
+    
+    }
+    
+    /*style for h1 an dh2 */
+    
+    h1,h2{
+    
+    text-align: center;
+    
+    }

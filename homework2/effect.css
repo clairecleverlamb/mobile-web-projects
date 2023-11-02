@@ -31,7 +31,7 @@ p {
 }
 
 header { /*changed to just header to be more semantic*/
-	background-color: #333;
+	background-color: #2686b3;
 	background-image: url(images/headerbkgd.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
@@ -55,10 +55,10 @@ ul.navigation li {
 }
 
 ul.navigation li a {
-	background: #4d4963;
+	background: #1d7c91;
 	color: var(--white);
-	border-radius: 2px;
-	border: var(--border-default) #3c1f1f;
+	border-radius: 2px;s
+	border: var(--border-default) #785e5e;
 	padding: 3px 10px;
 	text-decoration: none;
 }
@@ -87,12 +87,14 @@ div.sidebar-left {
 }
 
 div.sidebar-left a {
-	color: #396771;
+	color: hsl(191, 93%, 24%);
 }
 
 .list {
-	border-bottom: var(--border-default) #c3dce1;
+	border-bottom: var(--border-default) #197c90;
 	padding: 0 0 20px 15px;
+    border-width: thick;
+    
 }
 
 .list li {
@@ -106,12 +108,14 @@ div.sidebar-left a {
 }
 
 footer { /*changed to footer to be more semantic*/
-	background-color: #c4d5d9;
+	background-color: #2686b3;
 	margin: 0 auto;
 	padding: 15px;
 	text-align: center;
 	/*width: 900px;*/
 	max-width: 930px; /*account for box-sizing*/
+    color: rgb(237, 212, 212);
+    font-size: 18px;    
 }
 
 .float-left {
@@ -127,13 +131,13 @@ footer { /*changed to footer to be more semantic*/
 @keyframes border {
 	from {
 		border-radius: 0px;
-		box-shadow: 0px 0px rgba(0, 0, 0, 0);
+		box-shadow: 0px 0px rgba(81, 140, 180, 0);
 		transform: rotate(0);
 	}
 
 	to {
 		border-radius: 360px;
-		box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
-		transform: rotate(360deg);
+		box-shadow: 5px 5px rgba(236, 56, 56, 0.435);
+		transform: rotate(2.5deg);
 	}
 }

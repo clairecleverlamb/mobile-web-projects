@@ -1,0 +1,139 @@
+:root {
+	--white: #fff;
+	--border-default: 1px solid;
+	--border-radius-large: 4px;
+	--border-radius-medium: 2px;
+}
+
+* {
+	box-sizing: border-box; /*Added box-sizing*/
+}
+
+body, h1, h2, h3, p, img, ul, li {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #eaf8fb;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8125rem;
+}
+
+p {
+	letter-spacing: .04em;
+	line-height: 1.313rem;
+}
+
+.twoEm {
+	font-size: 2em;
+}
+
+header { /*changed to just header to be more semantic*/
+	background-color: #333;
+	background-image: url(images/headerbkgd.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	color: var(--white);
+	border-radius: 0 4px; /*concatenate the border-radius*/
+	margin: 0 auto;
+	min-height: 190px; /*Changed to 190px from 130px due to box-sizing*/
+	padding: 45px 15px 15px;
+	max-width: 900px; /*Changed width to account for box-sizing*/
+
+}
+
+ul.navigation {
+	list-style: none;
+	margin-top: 20px;
+}
+
+ul.navigation li {
+	display: inline-block;
+	margin: 0 3px 5px;
+}
+
+ul.navigation li a {
+	background: #4d4963;
+	color: var(--white);
+	border-radius: 2px;
+	border: var(--border-default) #3c1f1f;
+	padding: 3px 10px;
+	text-decoration: none;
+}
+
+main { /*changed to main to be more semantic*/
+	display: grid; /*addition of grid layout*/
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px; /*to account for .sidebar-right's padding, which was removed*/
+	justify-content: space-between; /*no float left or right so this pushes content out*/
+	margin: 15px auto;
+	/*width:870px;*/
+	max-width: 900px; /*accounting for box-sizing*/
+	padding-left: 10px; /*to account for .sidebar-left's padding which was removed*/
+}
+
+div.col-right {
+	/*float:right;*/
+	grid-area: 1/2/1/2; /*set to second column since we have no float:right any longer*/
+	max-width: 660px;
+}
+
+div.sidebar-left {
+	/*float:left;*/
+	grid-area: 1/1/1/1; /*set to first column since we have no float:left any longer*/ /*padding:0 10px;*/ /*padding accounted for in div.content padding-left and grid-column-gap*/
+	max-width: 200px;
+}
+
+div.sidebar-left a {
+	color: #396771;
+}
+
+.list {
+	border-bottom: var(--border-default) #c3dce1;
+	padding: 0 0 20px 15px;
+}
+
+.list li {
+	margin-bottom: 10px
+}
+
+.list li a {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+}
+
+footer { /*changed to footer to be more semantic*/
+	background-color: #c4d5d9;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: center;
+	/*width: 900px;*/
+	max-width: 930px; /*account for box-sizing*/
+}
+
+.float-left {
+	float: left;
+	margin: 0 10px 10px 0;
+	animation: border 3s ease 1s infinite alternate;
+}
+
+.clear {
+	clear: both;
+}
+
+@keyframes border {
+	from {
+		border-radius: 0px;
+		box-shadow: 0px 0px rgba(0, 0, 0, 0);
+		transform: rotate(0);
+	}
+
+	to {
+		border-radius: 360px;
+		box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+		transform: rotate(360deg);
+	}
+}

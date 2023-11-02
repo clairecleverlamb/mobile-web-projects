@@ -55,10 +55,10 @@ ul.navigation li {
 }
 
 ul.navigation li a {
-	background: #4a4a4a;
+	background: #9ad7ee;
 	color: var(--white);
 	border-radius: 2px;
-	border: var(--border-default) #595959;
+	border: var(--border-default) #b8d5f4;
 	padding: 3px 10px;
 	text-decoration: none;
 }

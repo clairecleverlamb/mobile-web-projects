@@ -1,0 +1,178 @@
+<html lang = "en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABC Toys</title>
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&amp;family=Lato:wght@300;400;700&amp;family=Open+Sans:wght@300;400;500;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+   <!-- Leaflet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <style>
+    #map { height: 500px; }
+   </style>
+  </head>
+
+  <body>
+    <header class="header" id="pageTop">
+      <nav class="navbar navbar-expand-md ">
+        <div class="container d-flex justify-content-between">
+          <a class="navbar-brand">
+              <img class="d-inline-block" src="toy-logo.png" alt="ABC Toys">
+          </a>
+          <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i> 
+          </button>
+          <!-- Left side of Navbar with Links -->
+          <div class="navbar-collapse collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item dropdown bg-primary">
+                <a href="index.html" class="nav-link">
+                  <i class="fas fa-home nav-icon"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-danger">
+                <a href="products.html" class="nav-link">
+                  <i class="fas fa-shop nav-icon"></i>
+                  <span>Products</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-success">
+                <a href="location.html" class="nav-link">
+                  <i class="fas fa-location-pin nav-icon"></i>
+                  <span>Location</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-purple">
+                <a href="contact.html" class="nav-link">
+                  <i class="fas fa-contact-book nav-icon"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-info">
+                <a href="extra.html" class="nav-link">
+                  <i class="fas fa-plus-circle nav-icon"></i>
+                  <span>Extras</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>  
+    <main>
+      <div class="main-wrapper location">
+      <section class="breadcrumb-bg" style="background-image: url(Retail_location.png);">
+          <div class="container">
+            <div class="breadcrumb-overlay"></div>
+            <div class="breadcrumb-holder">
+              <div class="breadcrumb-text">
+                <h1 class="breadcrumb-title">Location</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                  <li class="breadcrumb-item">
+                    <a class="text-white" href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item text-white active" aria-current="page">
+                    Location
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="map-section pt-9 pb-6 py-md-7">
+        <div class="container mb-3">
+          <h2 class="h2 text-center" style ="background-color:powderblue;">Current Location</h2> 
+          <div class="mb-9 leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id="map" tabindex="0" style="position: relative;">
+          <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(56px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(154px, 9px, 0px) scale(0.5);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(153px, 9px, 0px) scale(1);"><img alt="" src="https://tile.openstreetmap.org/17/21025/50680.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-223px, 47px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21025/50681.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-223px, 303px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21024/50680.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-479px, 47px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21026/50680.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(33px, 47px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21024/50681.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-479px, 303px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21026/50681.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(33px, 303px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21025/50679.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-223px, -209px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21024/50679.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-479px, -209px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/17/21026/50679.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(33px, -209px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="284" height="600" viewBox="-80 -50 284 600" style="transform: translate3d(-80px, -50px, 0px);"><g></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(185px, 134px, 0px);"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(185px, 134px, 0px); z-index: 134;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(5.38253e+06px, 1.29743e+07px, 0px) scale(65536);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a class="leaflet-control-layers-toggle" href="#" title="Layers" role="button"></a><section class="leaflet-control-layers-list"><div class="leaflet-control-layers-base"><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_30" checked="checked"><span> Open Street Map</span></span></label><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_30"><span> Stadia Outdoors</span></span></label><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_30"><span> Google Streets</span></span></label></div><div class="leaflet-control-layers-separator" style="display: none;"></div><div class="leaflet-control-layers-overlays"></div></section></div></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-locate leaflet-bar leaflet-control"><a class="leaflet-bar-part leaflet-bar-part-single" title="Show my current location!" href="#" role="button"><span class="leaflet-control-locate-location-arrow"></span></a></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div></div>
+          <p id="currentPos">Current Location: 37.7353096, -122.2503769</p>
+        </div>
+      </section>
+      </div>
+    </main>
+    <!--Jquery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      new WOW().init();
+    
+      // Function to initialize the map
+      function initMap() {
+        const map = L.map('map').setView([0,0], 13);
+  
+        // Leaflet Control for geolocation
+        const locationControl = L.control
+          .locate({
+            position: "bottomleft",
+            strings: {
+              title: "Show my current location!"
+            },
+            locateOptions: {
+              enableHighAccuracy: false
+            }
+          })
+          .addTo(map);
+  
+        locationControl.start(); // Start geolocation as soon as the control is added to the map
+  
+        map.on('locationfound', (e) => {
+          const { lat, lng } = e.latlng;
+          $("#currentPos").text(`Current Location: ${lat}, ${lng}`);
+          L.marker([lat, lng]).addTo(map)
+            .bindPopup('You are here!');
+          locationControl.stop();
+        });
+  
+        // Tile layers
+        const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
+  
+        const stadiaOutdoors = L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.{ext}', {
+          minZoom: 0,
+          maxZoom: 20,
+          attribution: `
+            &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a>`,
+          ext: 'png'
+        });
+  
+        const googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+          maxZoom: 20,
+          subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+  
+        // Different map styles
+        const baseMaps = {
+          "Open Street Map": osm,
+          "Stadia Outdoors": stadiaOutdoors,
+          "Google Streets": googleStreets
+        };
+  
+        // Add baseLayers to map
+        L.control.layers(baseMaps).addTo(map);
+  
+        osm.addTo(map);
+      }
+  
+      $(document).ready(initMap);
+    </script>
+  
+  
+  </body>
+
+
+  </html>

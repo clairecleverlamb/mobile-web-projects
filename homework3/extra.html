@@ -1,0 +1,128 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABC Toys</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&amp;family=Lato:wght@300;400;700&amp;family=Open+Sans:wght@300;400;500;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <header class="header" id="pageTop">
+      <nav class="navbar navbar-expand-md">
+        <div class="container d-flex justify-content-between">
+          <a class="navbar-brand">
+              <img class="d-inline-block" src="toy-logo.png" alt="ABC Toys">
+          </a>
+          <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i> 
+          </button>
+          <!-- Left side of Navbar with Links -->
+          <div class="navbar-collapse collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item dropdown bg-primary">
+                <a href="index.html" class="nav-link">
+                  <i class="fas fa-home nav-icon"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-danger">
+                <a href="products.html" class="nav-link">
+                  <i class="fas fa-shop nav-icon"></i>
+                  <span>Products</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-success">
+                <a href="location.html" class="nav-link">
+                  <i class="fas fa-location-pin nav-icon"></i>
+                  <span>Location</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-purple">
+                <a href="contact.html" class="nav-link">
+                  <i class="fas fa-contact-book nav-icon"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown bg-info">
+                <a href="extra.html" class="nav-link">
+                  <i class="fas fa-plus-circle nav-icon"></i>
+                  <span>Extras</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>  
+    <main>
+      <div class="main-wrapper contact-us">
+        <!-- ====================================
+        
+        ===================================== -->
+        <section class="breadcrumb-bg" style="background-image: url(extratoy.png);">
+            <div class="container">
+              <div class="breadcrumb-overlay"></div>
+              <div class="breadcrumb-holder">
+                <div class="breadcrumb-text">
+                  <h1 class="breadcrumb-title">Extras</h1>
+                  <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                      <a class="text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">
+                      Extras
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <section class="extras pt-9 pb-6 py-md-7">
+          <div class="container">
+            <div class="section-title justify-content-center mb-4 mb-md-8 wow fadeInUp">
+              <!-- <span class="shape shape-left bg-info"></span> -->
+              <h2 class="text-danger">WURFL</h2>
+              <!-- <span class="shape shape-right bg-info"></span> -->
+            </div>
+            <div class="extra-content d-flex flex-column">
+              <table id="wurfl-table">
+                <tbody><tr>
+                    <th class="text-center bg-danger">Capability</th>
+                    <th class="text-center bg-pink">Description</th>
+                </tr>
+                <tr>
+                    <td><code>brand_name</code></td>
+                    <td>A string that indicates the brand name of the device.</td>
+                </tr>
+                <tr>
+                    <td><code>device_os</code></td>
+                    <td>A string that indicates the operating system installed on the device.</td>
+                </tr>
+                <tr>
+                    <td><code>dual_orientation</code><br><code>resolution_width</code></td>
+                    <td>A Boolean that indicates whether the device supports dual orientation.</td>
+                </tr>
+            </tbody></table>
+            <a href="./index.html" class="cta-button bg-info text-center" title="Going back">Go Back to Home Page</a>
+            </div>
+          </div>
+        </section>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="pt-8 pb-7 container">
+    </div>
+    <br>
+    <br>
+  </footer>
+  
+  
+  </body></html>

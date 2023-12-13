@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>short task - compare Cordova , Flutter, and React Native</title>
+    <meta name="description" content="homework 5 short task">
+    <link rel="stylesheet" type="text/css" href="short_task.css" >
+  </head>
+  <body>
+    <h2 class="title">Comparison of Cordova , Flutter, and React Native</h2>
+    <a href="https://apiko.com/blog/native-mobile-app-development-react-native-vs-flutter-vs-cordova/"> Please check out this link for more info </a>
+    <br>
+    <br>
+    <div class="part1">
+      <p class="h3-title">Part 1 Cordova</p>
+      <p><strong>Cordova - Using HTML5, CSS3 and JavaScript, is fast for developers to pick up, allowing getting small mobile apps almost in no time. </strong></p>
+      <ul class="h3-list">
+        <li>Easy learning curve due to being written with HTML5, CSS3 and JS</li>
+        <li>Perfect solution for rewriting little JS web apps into the mobile ones</li>
+        <li>High speed of mobile app development</li>
+        <li>Works well for development of little cross-platform mobile applications like MVP or PoC</li>
+      </ul>
+    </div>
+    <br>
+
+    <div class="part2">
+      <p class="h3-title">Part 2 Flutter</p>
+      <p><strong>Flutter - A cross-platform app development framework created by Google. It offers a wide variety of widgets to build the application with. </strong></p>
+      <ul class="h3-list">
+        <li>A complete set of tools for app development right out of the box</li>
+        <li>Dart directly compiles into native code without any auxiliary tools</li>
+        <li>Hot Reload shows the results of any code changes directly on real or virtual device almost in no time </li>
+        <li>Perfect for apps with customized or even intricate design, native performance guaranteed</li>                  
+      </ul>
+    </div>
+    <br>
+
+    <div class="part3">
+      <p class="h3-title">Part3 React Native</p>
+      <p><strong>React Native - Developed by Facebook as an extension of React.js. It uses components to build mobile applications both for iOS and Android.</strong></p>
+      <ul class="h3-list">
+        <li>Provides native feel and high-quality user experience</li>
+        <li>UI components reusability</li>
+        <li>Framework’s maturity </li>
+        <li>It aims to reach 60 frames per second, that makes it similar to native apps</li>                  
+      </ul>    
+    </div>
+    <br>
+    <br>
+  </body>
+  <footer class ="h2-footer">Page Updated: Dec 12th, 2023</footer>
+
+<script>
+  const registerWorker = async() => {
+  if ('serviceWorker'in navigator) {
+    // try {
+
+    // }
+    window.addEventListener('install', () => {
+      navigator.serviceWorker.register('./service-worker.js')
+      .then(registration => console.log("serviceWorker Registered"))
+      .catch(error => console.log("serviceWorker Not registered - ${error}"))
+    })
+  } else {
+    console.log("Service worker is not found", error);
+  }};
+  registerWorker();
+
+  
+</script>
+</html>

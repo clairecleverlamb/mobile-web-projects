@@ -1,84 +1,71 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <link href="personal.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Personal Web Page</title>
+    <link rel="stylesheet" href="personal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Personal Web page - to be updated</title>
     <script>
-        function change1() {
-            var div=$("#animation1");
-            div.animate({"font-size": "+=1rem"}, 3500);
-            div.css({"background-color": "blue",});
-            var photo=$("#container1");
-            photo.css({"border": "3px black solid"});
-        }
-
-        function change2 () {
-            var div=$("#animation1");
-            div.animate({"font-size": "-=1rem"}, 3500);
-            div.css({"background-color": "transparent",});
-        }
-
-        $(document).ready(function(){
-          $("button").click(function(){
-            change1();
-            setTimeout(function() {change2()}, 5000);
-          });
-
-    });
-        </script>
-
+        $(document).ready(function () {
+            $("#animateBtn").click(function () {
+                let div = $("#animation1");
+                div.animate({"font-size": "+=1rem"}, 3500).css("background-color", "blue");
+                $("#profile-container").css("border", "3px solid black");
+                setTimeout(function () {
+                    div.animate({"font-size": "-=1rem"}, 3500).css("background-color", "transparent");
+                }, 5000);
+            });
+        });
+    </script>
 </head>
-<body>
 
-    <h1 id= "animation1">Simple HTML & CSS Page</h1>
-    <button class="button">Click here to start the action</button>
-    <br>
-    <div>
-        <div class="MyImage">
-            <figure id="container1">
-            <img src="MyImage.jpg" alt="My Picture" width="490" height="380">
+<body>
+    <header>
+        <h1 id="animation1">Simple HTML & CSS Page</h1>
+        <button id="animateBtn" class="button">Click here to start the action</button>
+    </header>
+    
+    <section class="profile">
+        <figure id="profile-container">
+            <img src="MyImage.jpg" alt="Claire Chen" width="490" height="380">
             <figcaption>Claire Chen</figcaption>
         </figure>
-        </div>
-    </div>
-    <div class="firstp">
-    <h2>About Me&#8758;</h2>
-    <p>My Name is Claire Chen and I am a student of this college for a little more than 1 year. 
-        I love learning new things in the college, also I really enjoy making new friends and I love technology!!
-        </p>>
-    </div>
-<hr>
-<h2>My Dream Job&#8758;</h2>
-<p>I am attending this class because I am egar to learn web development like HTML , CSS and JavaScript. I wanted to know how an web page can be designed and become a software engineer!
-</p>
-
-<hr>
-<h3>Technologies for this class</h3>
-<div class="first">
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-
-</ul>
-
-<h2> Resources</h2>
-<ul>
-    <li><a href="http://www.w3schools.com">w3schools.com</a> : This website provide you all resources that are required to
-        learn web development.
-    </li>
-    <li><a href="https://developer.mozilla.org/en-US/">developer.mozilla.org.com</a> : This website has all the latest info you need as a Developer.
-    </li>
-
-</ul>
-</hr>
+    </section>
+    
+    <section class="about">
+        <h2>About Me</h2>
+        <p>My name is Claire Chen, I am new to HTML & CSS, and excited to learn!
+           I love learning new things, adventures, and exploring technology!</p>
+    </section>
+    
+    <hr>
+    
+    <section class="dream-job">
+        <h2>My Dream Job</h2>
+        <p>I am attending this class because I am eager to learn web development.
+           I want to understand how web pages are designed and their general architecture!</p>
+    </section>
+    
+    <hr>
+    
+    <section class="technologies">
+        <h3>Technologies for this Class</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+    
+    <section class="resources">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="http://www.w3schools.com">w3schools.com</a>: A great resource for learning web development.</li>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>: The latest information for developers.</li>
+        </ul>
+    </section>
 </body>
-
 </html>
-

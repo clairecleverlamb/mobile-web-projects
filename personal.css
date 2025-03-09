@@ -1,11 +1,57 @@
-body {background-color: whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-h1 {font-weight: bold; color: darkolivegreen;text-align: center;}
-.Photo1 {float:left; clear:both}
-.firstp {padding-left: 400px;}
-h2 {font-weight: bold; color: olivedrab;}
-h3 {font-weight: bold; color: olivedrab; text-align: center; font-size:x-large;}
-.first {text-align:center; display:block; background-color: olive; color: whitesmoke; padding: 12px; border: 1px; margin-right: 600px;margin-left: 600px;}
-ul {text-align: left; font-size: x-large;}
-p {font-size:x-large;}
-a:hover {background-color:olivedrab; color:whitesmoke;}
-.h1after {color: purple;}
+body {
+    background-color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    color: darkolivegreen;
+}
+
+h2, h3 {
+    font-weight: bold;
+    color: olivedrab;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    display: block;
+    margin: 0 auto;
+}
+
+p, ul {
+    font-size: x-large;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a:hover {
+    background-color: olivedrab;
+    color: whitesmoke;
+}
